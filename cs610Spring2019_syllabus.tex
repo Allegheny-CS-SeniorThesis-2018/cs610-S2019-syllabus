@@ -1,0 +1,373 @@
+\documentclass[11pt]{article}
+
+% Use this when displaying a new command
+
+\newcommand{\command}[1]{``\lstinline{#1}''}
+\newcommand{\program}[1]{\lstinline{#1}}
+\newcommand{\url}[1]{\lstinline{#1}}
+\newcommand{\channel}[1]{\lstinline{#1}}
+\newcommand{\option}[1]{``{#1}''}
+\newcommand{\step}[1]{``{#1}''}
+
+\usepackage{longtable}
+
+\usepackage{pifont}
+\newcommand{\checkmark}{\ding{51}}
+\newcommand{\naughtmark}{\ding{55}}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small\ttfamily,
+  columns=flexible,
+  breaklines=true
+}
+
+% Define the headers and footers
+
+\usepackage{fancyhdr}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\rhead{Computer Science 610}
+\lhead{Syllabus}
+\rfoot{Page \thepage}
+\lfoot{Spring 2019}
+
+% Use elastic spacing around the headers
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{6pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+\newcommand{\syllabustitle}[1]
+{
+  \begin{center}
+    \begin{center}
+      \bf
+      CMPSC 610\\Senior Thesis II\\
+      Spring 2019\\
+      \medskip
+    \end{center}
+    \bf
+    #1
+  \end{center}
+}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\syllabustitle{Syllabus}
+
+\vspace*{-.2in}
+\subsection*{Course Instructors}
+
+\begin{tabular}{c c}
+
+\begin{minipage}{3.5in}
+Dr.\ Oliver Bonham-Carter \\
+\noindent Office Location: Alden Hall 104 \\
+\noindent Email: \url{obonhamcarter@allegheny.edu} \\
+\end{minipage} &
+
+\begin{minipage}{3.5in}
+Dr.\ Janyl Jumadinova\\
+\noindent Office Location: Alden Hall 105 \\
+\noindent Email: \url{jjumadinova@allegheny.edu} \\
+\end{minipage} \\
+
+\begin{minipage}{3.5in}
+Dr.\ Gregory M.\ Kapfhammer\\
+\noindent Office Location: Alden Hall 108 \\
+\noindent Email: \url{gkapfham@allegheny.edu} \\
+\end{minipage} &
+
+\begin{minipage}{3.5in}
+Dr.\ Aravind Mohan\\
+\noindent Office Location: Alden Hall Room 106\\
+\noindent Email: \url{amohan@allegheny.edu} \\
+\end{minipage}
+
+\end{tabular}
+\vspace*{-.2in}
+
+\subsection*{Instructors' Office Hours}
+
+Please visit the web sites of the course instructors to view their office hours. Using the ``appointment slots''
+feature of Google Calendar, you can select an available meeting time. After picking your time slot, the reserved meeting
+will appear in both your Google Calendar and the instructor's.
+
+\vspace*{-.1in}
+\begin{itemize}
+  \itemsep -.25em
+  \item Oliver Bonham-Carter: \url{http://www.cs.allegheny.edu/sites/obonhamcarter/}
+  \item Janyl Jumadinova: \url{http://www.cs.allegheny.edu/sites/jjumadinova/}
+  \item Gregory M.\ Kapfhammer: \url{http://www.cs.allegheny.edu/sites/gkapfham/}
+  \item Aravind Mohan \url{http://www.cs.allegheny.edu/sites/amohan/}
+\end{itemize}
+
+\vspace*{-.25in}
+\subsection*{Course Communication}
+
+Throughout this semester, students and faculty will use last semester's Slack
+team to support course communication. Whenever possible, students are also
+encouraged to post appropriate questions to a channel in Slack, which is
+available at \url{https://cs-seniorthesis2018.slack.com}. All students are also
+required to use GitHub to submit all of the deliverables for this course's
+various projects.
+
+\vspace*{-.1in}
+\subsection*{Course Schedule}
+
+Organized according to the calendar month during which an activity takes place
+or a project is due, the following table outlines this course's schedule for
+the entire academic semester. Some of these dates are approximate and, if the
+need to do so presents itself, it is possible for the course instructors to
+modify the proposed schedule and notify the class of any changes via email or
+Slack. Unless it is otherwise noted that there is no class session, it is
+assumed that, even if there is a course project due or a research task to
+complete, you will still attend a research group meeting during the scheduled
+session for this course and participate in the technology tea.
+
+\begin{center}
+\begin{tabular}{r|l}
+\hline
+
+%Before January 22  & Schedule weekly meeting time with your first reader \\
+Before February 19 & Schedule thesis defense with Pauline Lanzine \\
+January 22  & Establish and release a GitHub repository for the project implementation \\
+February 12 & Submit a Thesis Draft and Participate in Peer Editing  \\
+March 5           & Submit three-paragraph status update on your progress \\
+March 12 & Submit a Thesis Draft and Participate in Peer Editing \\ 
+March 26 & Submit a Thesis Draft and Participate in Peer Editing \\ 
+April 2            & Submit unbound digital copy of thesis to first and second readers by 4 pm \\
+April 3--April 23  & Complete oral defense of senior thesis \\
+April 30              & Submit final bound and signed thesis to Pauline Lanzine by 4 pm \\
+Before thesis defense       & Submit final changes to the project implementation repository  \\
+
+\hline
+Entire academic semester & Meet with research group and first reader on a weekly basis \\
+Entire academic semester & Participate in discussions in the Slack team \\
+Entire academic semester & Use GitHub to commit to your research repositories \\
+\hline
+\end{tabular}
+\end{center}
+
+% \vspace*{-.25in}
+
+\noindent Please note that, unless evidence of extenuating circumstances is
+presented in writing to all of the instructors, a student's grade in the course
+will be reduced if the stated deadlines are not met. Students who have questions
+or concerns about these deadlines should talk with their first reader.
+
+\subsection*{Required Textbooks}
+
+\noindent{\em On Being a Scientist: A Guide to Responsible Conduct in Research}
+(Third Edition).  Committee on Science, Engineering, and Public Policy, National
+Academy of Sciences, National Academy of Engineering, and Institute of Medicine.
+ISBN: 0309119715, 82 pages, 2009.\\ (References to the textbook are abbreviated
+as ``OBAS'').
+
+\vspace*{.1in}
+
+\noindent{\em BUGS in Writing: A Guide to Debugging Your Prose} (Second
+Edition). Lyn Dupr\'e.  Addison-Wesley Professional.  ISBN-10: 020137921X and
+ISBN-13: 978-0201379211, 704 pages, 1998.\\ (References to the textbook are
+abbreviated as ``BIW'').
+
+\vspace*{.1in}
+
+\noindent{\em Writing for Computer Science} (Second Edition).  Justin Zobel.
+Springer ISBN-10: 1852338024 and ISBN-13: 978-1852338022, 270 pages, 2004. \\
+(References to the textbook are abbreviated as ``WFCS'').
+
+\subsection*{Overview of the Grading Policies}
+
+Final grades are determined after the entire faculty of the Department of
+Computer Science --- not just your course instructor for CMPSC 610 --- review
+and discuss all of the submitted deliverables.
+
+Your grade in CMPSC 610 will be based on a combination of the following
+activities and deliverables. Percentages are not given because we recognize
+that the senior thesis experience differs from one student to the next and that
+there are many variables, such as the nature of the project and the
+availability of external resources, that can influence the relative importance
+of these criteria. However, it is important to note that a large percentage of
+your grade depends upon your written senior thesis chapters and the oral
+defense of your senior thesis.
+
+\begin{itemize}
+
+  \item {\bf Class Participation}: This includes meeting regularly with your
+    research group and your first reader. Additionally, this also requires regular
+    contributions, in the form of questions and comments, to the course's Slack
+    team. As previously mentioned in the ``Course Schedule'' section, all
+    students are required to attend all of the Tuesday class sessions and to
+    fully participate in their research group meetings.
+
+  \item {\bf Course Repositories}: This involves students creating, at minimum,
+    a GitHub version control repository for each of the assigned course
+    projects and a properly created, documented and released GitHub repository
+    containing project implementation materials. The project implementation
+    repository can be created under course organization or under student's individual
+    GitHub account, in which case it must be shared with both first and second readers. 
+    Students should use their
+    ``cmpsc-600-610-project-3-2018-2019-allegheny-college-username'' 
+    repository from CMPSC 600 to commit and release their thesis chapter. 
+    Students should regularly use the Travis system and GitHub's tagging mechanism
+    to release PDFs of your thesis document with versions that adhere to the semantic
+    versioning standard. Course instructors will only grade and provide feedback
+    on projects that are stored and released through GitHub.
+
+  \item {\bf Status Update}: This document should describe the progress that a
+    student has made on completing the research (e.g., program implementation
+    and testing, experimentation, and statistical analysis) for their senior
+    thesis and documenting your results in the senior thesis chapters. Written
+    with feedback from your first and second readers, your status update should
+    be stored and released through the appropriate GitHub repository, which is to be
+    created via GitHub Classroom assignment link.
+    
+   \item {\bf Thesis Draft and Peer Editing}: At various times during the semester 
+   each student will be required to submit the current draft of their thesis document
+   via the appropriate GitHub repository. Additionally, each student will be tasked with editing a thesis
+   draft of at least one of their research peers. The peer editing summary is to be
+   released through GitHub as an issue, written using a proper Markdown syntax, 
+   following the template provided to students via GitHub Classroom. 
+   Finally, detailed edits should be marked in the document directly and provided to the author 
+   in a paper or electronic format.
+
+  \item {\bf Written Thesis}: In consultation with your first reader and in
+    accordance with the stated deadlines, you must work out a schedule for
+    completion of your thesis research and your written document. All senior
+    theses are due, in a proper digital format but not bound, on the stated due
+    date. Working closely with your first reader, you must produce a thesis
+    that both follows the department's style and adheres to professional
+    standards of writing. Your grade in CMPSC 610 will be reduced if you fail
+    to submit your unbound thesis on time.
+
+    Following your defense, you must submit the bound copy of your senior
+    thesis by the aforementioned due date.  This document must incorporate any
+    changes that were requested by your first and second reader. Seniors who
+    have not delivered the signed and bound copies of their senior thesis by
+    the stated deadline will receive an incomplete and will not graduate.
+
+  \item{\bf Thesis Defense}: The standards for this presentation are the same
+    as for the proposal defense --- you must give a ten to fifteen minute
+    presentation supported by polished slides and adhere to all of the other
+    stated requirements for this deliverable. Part of your grade for this
+    defense will depend on how well you are able to discuss aspects of your
+    thesis, including implications of your work, connections between your
+    research and other areas of computer science, and possible extensions or
+    improvements of your research ideas. You are expected to work with your
+    first reader in preparing your oral defense. Your grade in CMPSC 610 will
+    be reduced if you do not schedule or conduct your thesis defense by the
+    stated deadlines.
+
+    Unless there are severe extenuating circumstances, students are not allowed
+    to reschedule their defense once they have a confirmed date from Pauline
+    Lanzine. To schedule your thesis defense, please check the Google Calendar
+    of your first and second readers and come to Pauline's office with three
+    dates and times that fit into your schedule and the schedules of your
+    readers. Do not suggest dates and times that conflict with the schedules of
+    your readers!
+
+\end{itemize}
+
+\subsection*{Additional Details About Course Expectations and Deliverables}
+
+\subsubsection*{Class Participation}
+
+You must regularly attend the scheduled class session and meet with your first
+reader as needed. We strongly encourage you to schedule office hour
+appointment with your first reader at least three times during the course
+of the semester to get individualized feedback and to ensure you are
+on track with your thesis work. During
+the class meetings, please be prepared to regularly share status updates on your
+progress towards completing your research. Your first reader will report on your 
+participation when the department's faculty
+meet to assign final grades for this course. In addition, students should regularly
+participate in the discussions on the relevant channels in the Slack team for
+our course. Your participation on Slack may involve giving a quick status
+update to your first reader, inviting your first reader to examine a draft of
+your proposal or compile and run a new version of a program, or, within the
+bounds of the Honor Code, answering a question from another senior conducting
+their thesis research.
+Failure to participate in class discussion and activities, including peer editIng, 
+will result in the reduction of your grade in CMPSC 610.
+
+\subsubsection*{GitHub Repositories}
+
+Every student must accept each of the course projects, thus creating a GitHub
+repository customized for the student and that specific project. All of these
+GitHub repositories should have a README file that clearly explains the steps
+that a student took to complete and release the final version of the
+assignment. In addition to containing the \LaTeX{} source code that fulfills
+the assignment, each GitHub repository should feature releases of the compiled
+PDF files that are tagged with numbers that adhere to the semantic versioning
+standard described at \url{http://semver.org/}.
+
+The release of a compiled PDF file can be accomplished automatically by using
+both the tagging and releases feature provided by GitHub and, additionally, the
+continuous integration system provided by Travis. Your first and second readers
+will download, read, and comment on a released PDF at semantic version 1.0.0 or
+higher. Students who are not able to automatically release PDFs of their
+projects may instead manually create them by using the GitHub interface. Please
+see an instructor if you have questions about using GitHub. Failure to either
+regularly commit to your GitHub repositories or to make releases of your PDFs
+will lead to a decrease in your final grade for CMPSC 610. Please note that we
+will continue to use the last GitHub repository from CMPSC 600 to store the
+final chapters of your thesis. Please see an instructor if you cannot use
+GitHub.
+
+\subsubsection*{Using Email}
+
+Although we will primarily use Slack for class communication, we will sometimes
+use email to send announcements about important class matters. It is your
+responsibility to check your email at least once a day and to ensure that you
+can reliably send and receive emails. This class policy is based on the
+statement about the use of email that appears in {\em The Compass}, the student
+handbook.
+
+\subsection*{Honor Code}
+
+The Academic Honor Program that governs the academic program at Allegheny
+College is described in the Allegheny Academic Bulletin. The Honor Program
+applies to all work that is submitted for academic credit or to meet non-credit
+requirements for graduation at Allegheny College. This includes all work
+assigned for these classes (e.g., source code, technical diagrams, and your
+written content); deliverables that are nearly identical the work of others will
+be taken as evidence of violating the Honor Code. All students who have enrolled
+in the College will work under the Honor Program. Each student who has
+matriculated at the College has acknowledged the following pledge:
+
+\begin{quote}
+I hereby recognize and pledge to fulfill my responsibilities, as defined in the
+Honor Code, and to maintain the integrity of both myself and the College
+community as a whole.
+\end{quote}
+
+\subsection*{Disability Services}
+
+The Americans with Disabilities Act (ADA) is a federal anti-discrimination
+statute that provides comprehensive civil rights protection for persons with
+disabilities. Among other things, this legislation requires all students with
+disabilities be guaranteed a learning environment that provides for reasonable
+accommodation of their disabilities. Students with disabilities who believe they
+may need accommodations in this class are encouraged to contact Disability
+Services at 332--2898. Disability Services is part of the Learning Commons and
+is located in Pelletier Library. Please do this as soon as possible to ensure
+that approved accommodations are implemented in a timely fashion.
+
+\subsection*{Welcome to an Adventure in Computer Science}
+
+CMPSC 610 affords you the opportunity to pursue independent research in
+computer science and to ensure that your work has a positive influence on your
+future plans, the students and faculty at Allegheny College, and a broader
+society that relies on computer hardware and software. As you complete your
+senior year, we invite you to pursue this class with great enthusiasm and
+vigor.
+
+\end{document}

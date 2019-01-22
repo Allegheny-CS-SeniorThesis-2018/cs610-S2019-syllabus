@@ -1,0 +1,15 @@
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
+  texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra
+  texlive-latex-recommended
+script:
+- mkdir _build
+- latexmk -pdf -outdir=_build cs610Spring2019_syllabus.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: qFJUXaqemnpZVjfpg1NwFuKWFfGgUWyQdDnUVS/KwmKJ8694w+zn4MflJq6AeOiC9i7gEJ+H6LCMXhcXHOeSaeHv3okL3ylq4wnU+5Lu57nLIPffs4hKTh+szRBI4o6/u/moRIYHB2/wM+CaQPxr4e5fHW2HkpLQOfQ0L6aUGBcxO/y0O6OaApfGbLgX3wpu927AQ0E8WJ5Ol3vgsXMBS6vLO9tvByoTMNjr3sixLD7FtNyArVgHdh4SZJaHx8HTJgdsuCNetXSpMoUu+0Xu6VecBCw0WArD7f7xi5EAqHOSNPvrrPBNiBJwmsnbF65KVoJtgzfKkTJIPMZ6LMBjdguXUXncDYPq8THGJG+PNtEGin1YjtZjhhHnV2xUL687yspVgmElJPiJjBLc3SMKk4WX8CG6KjwGCAJz4FyNSMZ+xBVjvCfVETz6FMOzyW/61ngwUaSHnWvglCKjirPfn2rE2Lr1KDC9GCcLmj0X1WQtIGYVmUjwTBzbAUoybTN47p5oXoewzoPOIS7BVbPYPlTQhyBfyxrMOq48xzzTzHriClAzfJldbnL0BDqUFApKbcQySpdb48MHHjMfC9XElhHJCcwHS1HR1oTMSJYdSMChcjEf17D2eSN+CMppsvrpBnkAnnwjDZvZpDWkRoBwxzi2mpxmAFTlX3N5jqRcZI8=
+  file: _build/cs610Spring2019_syllabus.pdf
+  skip_cleanup: true
+  on:
+    tags: true
